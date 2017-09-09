@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Harvard Sentences</string>
+
+    <string name="button_random">Random List</string>
+</resources>
