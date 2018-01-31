@@ -5,16 +5,25 @@
     android:layout_height="match_parent"
     tools:context="com.projs.liway.harvardsentences.MainActivity">
 
-    <TextView
-        android:id="@+id/list_textView"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        tools:text="List 1" />
+        android:layout_above="@id/random_button"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/list_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="List 1" />
+
+    </ScrollView>
+
 
     <Button
         android:id="@+id/random_button"
@@ -22,7 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/button_random"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_random" />
 
 </RelativeLayout>
