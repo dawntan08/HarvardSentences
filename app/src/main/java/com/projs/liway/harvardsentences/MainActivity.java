@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 R.raw.hs_66, R.raw.hs_67, R.raw.hs_68, R.raw.hs_69, R.raw.hs_70, R.raw.hs_71,
                 R.raw.hs_72};
 
-        textView.setText(Utils.readFileFromRaw(this, R.raw.hs_01));
+        // initial list presented to user open running app is already random
+        textView.setText(Utils.readFileFromRaw(this,
+                resources[Utils.randomNum(NUMBER_OF_LISTS)]));
+        // upon pressing button "Random List", textView is updated with a random list
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
                         resources[Utils.randomNum(NUMBER_OF_LISTS)]));
             }
         });
-
-
 
     }
 }

@@ -11,7 +11,7 @@ import java.util.Random;
 
 /**
  * Created by Liway on 1/29/2018.
- * helper class related to reading from txt file
+ *
  */
 
 public final class Utils {
@@ -48,6 +48,10 @@ public final class Utils {
         return rawFileString;
     }
 
+    /**
+     *
+     * generate random int from 0 to n-1
+     */
     public static int randomNum(int n){
         Random random = new Random();
         return random.nextInt(n);
